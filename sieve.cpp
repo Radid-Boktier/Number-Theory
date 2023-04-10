@@ -11,13 +11,13 @@ using namespace std;
     cout.precision(10);           \
     cout.setf(ios::fixed, ios::floatfield);
 
-const int MX = 1e6 + 123;
+const int MX = 1e7 + 123;
 
 // bool is_prime[MX];
 bitset<MX> is_prime;
 vector<int> prime;
 
-void solve(int n)
+void primeGen(int n)
 {
     // memset(is_prime, 1, sizeof(is_prime));
     for (int i = 3; i <= n; i += 2)
@@ -39,8 +39,6 @@ void solve(int n)
             prime.push_back(i);
     }
 
-    for (auto u : prime)
-        cout << u << " ";
     return;
 }
 int main()
@@ -52,7 +50,7 @@ int main()
     {
         int n;
         cin >> n;
-        solve(n);
+        primeGen(n);
     }
 
     return 0;
