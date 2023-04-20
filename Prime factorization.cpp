@@ -47,6 +47,8 @@ vector<ll> primefac(ll n)
     vector<ll> factor;
     for (auto p : prime)
     {
+        if(is_prime[n]) break;
+        
         if (1LL * p * p > n)
             break;
 
